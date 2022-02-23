@@ -1,0 +1,11 @@
+{
+    "version": 3,
+    "mappings": "AAGA,AAAA,SAAS,CAAC;EACR,KAAK,ECIC,IAAI;EDHV,OAAO,EAAE,IAAI;EACb,SAAS,EAAE,UAAU;EACrB,eAAe,EAAE,aAAa;EAC9B,WAAW,EAAE,UAAU;EACvB,OAAO,EAAE,aAAa;EACtB,KAAK,EAAE,IAAI;CACZ",
+    "sources": [
+        "Dashboard.scss",
+        "../../styles/_variables.scss",
+        "../../styles/_mixins.scss"
+    ],
+    "names": [],
+    "file": "Dashboard.css"
+}

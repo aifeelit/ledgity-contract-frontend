@@ -1,0 +1,80 @@
+@mixin btn-primary {
+  height: 50px;
+  background: $white;
+  border: 2px solid $blue;
+  border-radius: $borderRadiusBtn;
+  box-shadow: none;
+  text-shadow: none;
+  line-height: 22px;
+  color: $blue;
+  font-weight: 600;
+  transition: all .2s ease;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+
+  &::selection,
+  &:hover,
+  &:focus,
+  &:active{
+    background: $blue;
+    color: $white;
+  }
+}
+
+@mixin btn-secondary {
+  height: 60px;
+  background: transparent;
+  border: 1px solid $blue;
+  border-radius: $borderRadiusBtn;
+  box-shadow: none;
+  text-shadow: none;
+  line-height: 22px;
+  color: $blue;
+  font-weight: 600;
+  transition: all .2s ease;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+
+  &::selection,
+  &:hover,
+  &:focus,
+  &:active{
+    background: $blue;
+    color: $white;
+  }
+}
+
+@mixin block {
+  border: 1px solid $white;
+  width: 100%;
+  border-radius: $borderRadiusBlock;
+  padding: 30px;
+  margin-top: 20px;
+}
+
+@mixin input {
+  height: 40px;
+  border-radius: 8px;
+  background-color: $white;
+  opacity: 0.8;
+  color: $backgroundColor;
+  font-weight: 400;
+  transition: all .2s ease;
+  outline: none;
+
+  &::-moz-placeholder,
+  &::-webkit-input-placeholder,
+  &:-ms-input-placeholder,
+  &::-ms-input-placeholder,
+  &::placeholder {
+    color: $placeholder;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    opacity: 1;
+  }
+}

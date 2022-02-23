@@ -1,0 +1,277 @@
+@import 'styles/variables';
+@import 'styles/mixins';
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    font-weight: 500;
+    color: $primaryFontColor;
+}
+
+body {
+    background-color: $backgroundColor;
+    background-image: url('/images/figure.svg');
+    background-repeat: no-repeat;
+    background-position: right 5% bottom 5%;
+    min-height: 100vh;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.btn-primary {
+    @include btn-primary;
+
+    &.disabled {
+        background-color: $secondaryFontColor;
+        cursor: auto;
+        pointer-events: none;
+    }
+}
+
+.btn-secondary {
+    @include btn-secondary;
+}
+
+h2 {
+    color: $white;
+    font-size: 22px;
+    font-weight: 600;
+
+    &.title {
+        font-weight: 700;
+        text-transform: uppercase;
+        min-height: 30px;
+    }
+
+    @media(max-width: 1720px) {
+        font-size: 18px;
+    }
+}
+
+.container {
+    width: 100%;
+    padding: 0px 40px;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.balance {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+
+    &__title {
+        padding-right: 30px;
+
+        @media(max-width: 1720px) {
+            padding-right: 25px;
+        }
+    }
+
+    &__btns {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+
+        @media(max-width: 1500px) {
+            flex-direction: column;
+            margin-right: 30px;
+        }
+    }
+
+    &__item {
+        margin-right: 40px;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+
+        @media(max-width: 1720px) {
+            margin-right: 25px;
+        }
+
+        @media(max-width: 1500px) {
+            margin: 0px 0px 15px;
+            width: 100%;
+
+            &:last-child {
+                margin-bottom: 0px;
+            }
+        }
+    }
+    &__token {
+        color: $secondaryFontColor;
+        text-transform: uppercase;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        margin-right: 15px;
+
+        span {
+            color: inherit;
+            padding-left: 10px;
+        }
+
+        img {
+            width: 26px;
+        }
+
+        @media(max-width: 1720px) {
+            margin-right: 16px;
+            font-size: 15px;
+        }
+    }
+
+    &__price {
+        font-size: 30px;
+        font-weight: 600;
+
+        .dropdown-btn {
+            font-size: inherit;
+            font-weight: inherit;
+            min-width: inherit;
+            cursor: default;
+        }
+
+        @media(max-width: 1720px) {
+            font-size: 22px;
+            min-width: auto;
+        }
+    }
+}
+
+.field {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    width: 100%;
+    font-size: 16px;
+
+    &__label {
+        font-size: inherit;
+        color: $white;
+        width: 30%;
+        margin-right: 20px;
+
+        @media(max-width: 1470px) {
+            margin-right: 10px;
+        }
+    }
+    &__input {
+        @include input;
+
+        width: 55%;
+        display: flex;
+        align-items: center;
+        margin-right: 20px;
+        font-weight: 600;
+        border: none;
+        font-size: 16px;
+        padding: 0px 10px;
+
+        &.single {
+            width: 100%;
+        }
+
+        &.disabled {
+            pointer-events: none;
+        }
+
+        @media(max-width: 1470px) {
+            margin-right: 10px;
+        }
+    }
+
+    &__note {
+        width: 8%;
+        color: $secondaryFontColor;
+    }
+}
+
+.error-field {
+    position: absolute;
+    top: 100%;
+
+    p {
+        color: $red;
+        font-size: 14px;
+    }
+}
+
+.reload {
+    width: 30px;
+    height: 30px;
+    background-image: url('/images/reset.svg');
+    background-color: rgba(255,255,255,0.3);
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    border-radius: 6px;
+    border: none;
+    transition: all .2s ease;
+
+    &:hover {
+        background-color: rgba(255,255,255,0.5);
+    }
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-btn {
+    &:hover {
+        & + .dropdown-content {
+            display: block;
+            //opacity: 1;
+        }
+    }
+}
+
+.dropdown-content {
+    position: absolute;
+    left: 50%;
+    bottom: -50px;
+    transform: translate(-50%, 0);
+    min-width: 160px;
+    height: 50px;
+    padding: 13px 20px;
+    background-color: #edefff;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    transition: all .3s ease-in-out;
+    //opacity: 0;
+    border: 1px solid $secondaryFontColor;
+    border-radius: 37px;
+    text-align: center;
+    z-index: 1;
+    display: none;
+
+    &:after,
+    &:before {
+        position: absolute;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid #edefff;
+        top: -10px;
+        content: '';
+        left: 54%;
+        margin-left: -20px;
+    }
+
+    &:before {
+        border-left: 12px solid transparent;
+        border-right: 12px solid transparent;
+        border-bottom: 12px solid;
+        border-bottom-color: inherit;
+        top: -12px;
+        margin-left: -22px;
+    }
+}

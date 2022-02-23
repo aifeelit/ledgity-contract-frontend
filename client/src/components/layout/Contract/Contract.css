@@ -1,0 +1,155 @@
+.contract__owner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 40px;
+}
+
+.contract__image {
+  width: 58px;
+  height: 58px;
+}
+
+.contract__owner-info {
+  padding-left: 20px;
+  overflow: hidden;
+}
+
+.contract__address {
+  font-weight: 400;
+}
+
+.contract__note {
+  font-weight: 500;
+  color: #B5B5B5;
+}
+
+.contract__token-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contract__token {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contract__token span {
+  padding-left: 20px;
+}
+
+.contract__token span.contract__note {
+  text-transform: capitalize;
+}
+
+.contract__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 40px;
+}
+
+.contract__field {
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.contract__field.half {
+  width: 48%;
+}
+
+.contract__field.combine {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contract__field.combine .contract__label {
+  width: 100%;
+}
+
+.contract__field.combine .contract__input {
+  width: 64%;
+}
+
+.contract__field.combine .contract__note {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contract__label {
+  margin-bottom: 8px;
+}
+
+.contract__label.bold {
+  font-weight: 700;
+}
+
+.contract__label.green {
+  font-weight: 700;
+  color: #37b62c;
+}
+
+.contract__label.red {
+  font-weight: 700;
+  color: #c73232;
+}
+
+.contract__input {
+  width: 100%;
+  border: 1px solid #959595;
+  border-radius: 8px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  font-size: 16px;
+}
+/*# sourceMappingURL=Contract.css.map */

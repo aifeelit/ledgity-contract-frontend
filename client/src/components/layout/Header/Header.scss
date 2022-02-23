@@ -1,0 +1,115 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.app-header {
+  background-color: $backgroundHeader;
+  width: 100%;
+  min-height: 100px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+
+  @media(max-width: 1500px) {
+    padding: 10px 0px;
+  }
+
+  .container {
+    justify-content: space-between;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 220px;
+
+    @media(max-width: 1720px) {
+      width: auto;
+      padding: 0px 22px;
+      height: 50px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__btns {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+
+    @media(max-width: 1720px) {
+      align-items: center;
+    }
+  }
+
+  &__btns-wrap {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+
+    @media(max-width: 1500px) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__account {
+    width: 220px;
+    height: 60px;
+    border: 1px solid $blue;
+    border-radius: $borderRadiusBtn;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $white;
+    margin-left: 20px;
+
+    @media(max-width: 1720px) {
+      width: auto;
+      padding: 0px 22px;
+      height: 50px;
+      margin-left: 20px;
+    }
+
+    @media(max-width: 1500px) {
+      margin: 0px 0px 10px;
+      width: 100%;
+    }
+  }
+
+  &__users {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    color: $secondaryFontColor;
+    margin-right: 30px;
+
+    p {
+      color: inherit;
+      margin-right: 10px;
+      white-space: nowrap;
+
+      @media(max-width: 1500px) {
+        font-size: 15px;
+      }
+    }
+
+    .field__input {
+      background-color: $white;
+      margin: 0px;
+      min-width: 40px;
+      max-width: 110px;
+      color: $primaryFontColor;
+      justify-content: center;
+      overflow: hidden;
+
+      .no-connect {
+        font-weight: 400;
+        white-space: nowrap;
+      }
+    }
+  }
+}

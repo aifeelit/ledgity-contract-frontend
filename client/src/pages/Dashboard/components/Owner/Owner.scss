@@ -1,0 +1,104 @@
+@import '../../../../styles/variables';
+@import '../../../../styles/mixins';
+
+.owner {
+  color: inherit;
+  width: 31.5%;
+
+  &__block {
+    @include block;
+    min-height: 710px;
+  }
+
+  &__head {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+
+    h2 {
+      padding-right: 30px;
+    }
+    p {
+      font-size: 16px;
+      color: $red;
+    }
+  }
+
+  &__item {
+    margin-bottom: 50px;
+
+    &:last-child {
+      margin-bottom: 0px;
+    }
+
+    &.commission {
+      .field__label {
+        width: 28%;
+      }
+
+      .field__input {
+        width: 74%;
+        padding-left: 15px;
+        font-size: 16px;
+        font-weight: 400;
+      }
+
+      .field__label + .field__input {
+        width: 40%;
+        padding-left: 15px;
+        font-size: 16px;
+        font-weight: 400;
+      }
+
+      .btn-primary {
+        width: 24%;
+      }
+    }
+  }
+
+  &__fields {
+    margin-top: 40px;
+  }
+
+  &__field {
+    margin-bottom: 30px;
+    justify-content: space-between;
+    position: relative;
+
+    &.full {
+      flex-flow: row wrap;
+      justify-content: space-between;
+
+      .field__input {
+        width: 100%;
+        margin-right: 0px;
+        margin-bottom: 40px;
+      }
+      .btn-primary {
+        width: 49%;
+        max-width: 236px;
+      }
+    }
+
+    .error-field {
+      top: 48px;
+      bottom: auto;
+    }
+  }
+}
+
+@media(max-width: 1470px) {
+  .owner {
+    &__block {
+      padding: 20px;
+    }
+
+    &__item {
+      &.commission {
+        .btn-primary {
+          width: 28%;
+        }
+      }
+    }
+  }
+}

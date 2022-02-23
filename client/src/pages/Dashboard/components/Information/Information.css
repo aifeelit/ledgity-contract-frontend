@@ -1,0 +1,61 @@
+.information {
+  color: inherit;
+  width: 31%;
+}
+
+.information__head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.information__head h2 {
+  padding-right: 30px;
+}
+
+.information__block {
+  border: 1px solid #fff;
+  width: 100%;
+  border-radius: 20px;
+  padding: 30px;
+  margin-top: 20px;
+  min-height: 710px;
+}
+
+.information__item {
+  margin-bottom: 50px;
+}
+
+.information__item:last-child {
+  margin-bottom: 0px;
+}
+
+.information__fields {
+  margin-top: 40px;
+}
+
+.information__field {
+  margin-bottom: 30px;
+}
+
+.information__field:last-child {
+  margin-bottom: 0;
+}
+
+.information__field .field__input {
+  pointer-events: none;
+}
+
+@media (max-width: 1470px) {
+  .information__block {
+    padding: 20px;
+  }
+}
+/*# sourceMappingURL=Information.css.map */

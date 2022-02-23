@@ -1,0 +1,133 @@
+@import '../../../../styles/variables';
+@import '../../../../styles/mixins';
+
+.user {
+  color: inherit;
+  width: 34%;
+
+  &__block {
+    @include block;
+    min-height: 710px;
+  }
+
+  .btn-primary {
+    max-width: 236px;
+    width: 90%;
+  }
+
+  &__item {
+    margin-bottom: 32px;
+
+    &:last-child {
+      margin-bottom: 0px;
+    }
+
+    &.columns {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+    }
+
+    h2 {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__fields {
+    margin-top: 40px;
+  }
+
+  &__field {
+    margin-bottom: 26px;
+    justify-content: space-between;
+    position: relative;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .field__input {
+      margin-right: 0;
+      width: 52%;
+      padding-left: 15px;
+      font-size: 16px;
+      font-weight: 400;
+    }
+
+    .btn-primary {
+      width: 41%;
+    }
+  }
+
+  &__balance {
+    color: $white;
+    font-size: 16px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+
+    span {
+      color: inherit;
+      font-size: inherit;
+      padding-right: 20px;
+    }
+
+    h2 {
+      margin-bottom: 0;
+    }
+  }
+
+  &__column {
+    width: 49%;
+    display: flex;
+    flex-direction: column;
+
+    &:last-child {
+      margin-right: 0;
+      align-items: flex-end;
+      justify-content: space-between;
+
+      h2 {
+        padding-right: 24px;
+      }
+    }
+  }
+
+  &__form {
+    width: 100%;
+
+    .field__input {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+
+    .error-field {
+      padding-top: 8px;
+    }
+  }
+}
+
+.addresses-list {
+  width: 100%;
+  max-height: 600px;
+  overflow-y: auto;
+
+  &__item {
+    font-weight: 400;
+    display: flex;
+
+    span {
+      font-weight: 700;
+      padding-right: 20px;
+      min-width: 50px;
+    }
+  }
+}
+
+@media(max-width: 1470px) {
+  .user {
+    &__block {
+      padding: 20px;
+    }
+  }
+}

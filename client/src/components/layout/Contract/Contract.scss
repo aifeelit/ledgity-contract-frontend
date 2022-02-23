@@ -1,0 +1,117 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+$half: 48%;
+
+
+.contract {
+  &__owner {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+
+  &__image {
+    width: 58px;
+    height: 58px;
+  }
+
+  &__owner-info {
+    padding-left: 20px;
+    overflow: hidden;
+  }
+
+  &__address {
+    font-weight: 400;
+  }
+
+  &__note {
+    font-weight: 500;
+    color: #B5B5B5;
+  }
+
+  &__token-info {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__token {
+    display: flex;
+    align-items: center;
+
+    span {
+      padding-left: 20px;
+
+      &.contract__note {
+        text-transform: capitalize;
+      }
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin-top: 40px;
+  }
+
+  &__field {
+    margin-bottom: 30px;
+    width: 100%;
+
+    &.half {
+      width: $half;
+    }
+
+    &.combine {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+
+      .contract__label {
+        width: 100%;
+      }
+
+      .contract__input {
+        width: 64%;
+      }
+
+      .contract__note {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+
+  &__label {
+    margin-bottom: 8px;
+
+    &.bold {
+      font-weight: 700;
+    }
+
+    &.green {
+      font-weight: 700;
+      color: $green;
+    }
+
+    &.red {
+      font-weight: 700;
+      color: $red;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    border: 1px solid $secondaryFontColor;
+    border-radius: 8px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    font-size: 16px;
+  }
+}

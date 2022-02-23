@@ -1,0 +1,311 @@
+* {
+  font-family: 'Montserrat', sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  font-weight: 500;
+  color: #212121;
+}
+
+body {
+  background-color: #000829;
+  background-image: url("/images/figure.svg");
+  background-repeat: no-repeat;
+  background-position: right 5% bottom 5%;
+  min-height: 100vh;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0;
+  /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.btn-primary {
+  height: 50px;
+  background: #fff;
+  border: 2px solid #384ac2;
+  border-radius: 37px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  text-shadow: none;
+  line-height: 22px;
+  color: #384ac2;
+  font-weight: 600;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+
+.btn-primary::-moz-selection, .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+  background: #384ac2;
+  color: #fff;
+}
+
+.btn-primary::selection, .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+  background: #384ac2;
+  color: #fff;
+}
+
+.btn-primary.disabled {
+  background-color: #959595;
+  cursor: auto;
+  pointer-events: none;
+}
+
+.btn-secondary {
+  height: 60px;
+  background: transparent;
+  border: 1px solid #384ac2;
+  border-radius: 37px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  text-shadow: none;
+  line-height: 22px;
+  color: #384ac2;
+  font-weight: 600;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+
+.btn-secondary::-moz-selection, .btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active {
+  background: #384ac2;
+  color: #fff;
+}
+
+.btn-secondary::selection, .btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active {
+  background: #384ac2;
+  color: #fff;
+}
+
+h2 {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+h2.title {
+  font-weight: 700;
+  text-transform: uppercase;
+  min-height: 30px;
+}
+
+.container {
+  width: 100%;
+  padding: 0px 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+}
+
+.balance {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.balance__title {
+  padding-right: 40px;
+}
+
+.balance__item {
+  margin-right: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.balance__token {
+  color: #959595;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 40px;
+}
+
+.balance__token span {
+  color: inherit;
+  padding-left: 10px;
+}
+
+.balance__price {
+  font-size: 30px;
+  font-weight: 600;
+  min-width: 100px;
+}
+
+.field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  font-size: 16px;
+}
+
+.field__label {
+  font-size: inherit;
+  color: #fff;
+  width: 30%;
+  margin-right: 20px;
+}
+
+.field__input {
+  height: 40px;
+  border-radius: 8px;
+  background-color: #fff;
+  opacity: 0.8;
+  color: #000829;
+  font-weight: 400;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+  outline: none;
+  width: 55%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 20px;
+  font-weight: 600;
+  border: none;
+  font-size: 16px;
+  padding: 0px 10px;
+}
+
+.field__input::-moz-placeholder, .field__input::-webkit-input-placeholder, .field__input:-ms-input-placeholder, .field__input::-ms-input-placeholder, .field__input::placeholder {
+  color: #868686;
+}
+
+.field__input:hover, .field__input:active, .field__input:focus {
+  opacity: 1;
+}
+
+.field__input.single {
+  width: 100%;
+}
+
+.field__input.disabled {
+  pointer-events: none;
+}
+
+.field__note {
+  width: 8%;
+  color: #959595;
+}
+
+.error-field {
+  position: absolute;
+  bottom: -20px;
+}
+
+.error-field p {
+  color: #c73232;
+  font-size: 16px;
+}
+
+.reload {
+  width: 30px;
+  height: 30px;
+  background-image: url("/images/reset.svg");
+  background-color: rgba(255, 255, 255, 0.3);
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  border-radius: 6px;
+  border: none;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+}
+
+.reload:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 1720px) {
+  .app-header__btns {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .app-header__account {
+    width: auto;
+    padding: 0px 22px;
+    height: 50px;
+    margin-left: 20px;
+  }
+  .app-header .btn-primary,
+  .app-header .btn-secondary {
+    width: auto;
+    padding: 0px 22px;
+    height: 50px;
+  }
+  .balance__item {
+    margin-right: 25px;
+  }
+  .balance__title {
+    padding-right: 25px;
+  }
+  .balance__token {
+    margin-right: 16px;
+  }
+  .balance__price {
+    font-size: 26px;
+    min-width: auto;
+  }
+  h2 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 1470px) {
+  .field__input {
+    margin-right: 10px;
+  }
+  .field__label {
+    margin-right: 10px;
+  }
+}
+/*# sourceMappingURL=App.css.map */

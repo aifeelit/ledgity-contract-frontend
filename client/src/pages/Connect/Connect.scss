@@ -1,0 +1,47 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.connect {
+  height: 100vh;
+  background-image: url('/images/bg.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: inherit;
+  }
+
+  &__info {
+    margin: 70px 0px;
+
+    .btn-primary {
+      width: 220px;
+    }
+
+    p {
+      color: $secondaryFontColor;
+      margin-top: 20px;
+      text-align: center;
+    }
+  }
+
+  &__install {
+    text-align: center;
+    color: $secondaryFontColor;
+
+    p {
+      color: inherit;
+      margin-bottom: 30px;
+    }
+
+    .btn-primary {
+      text-decoration: none;
+      padding: 10px 20px;
+    }
+  }
+}

@@ -1,0 +1,113 @@
+.owner {
+  color: inherit;
+  width: 31.5%;
+}
+
+.owner__block {
+  border: 1px solid #fff;
+  width: 100%;
+  border-radius: 20px;
+  padding: 30px;
+  margin-top: 20px;
+  min-height: 710px;
+}
+
+.owner__head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.owner__head h2 {
+  padding-right: 30px;
+}
+
+.owner__head p {
+  font-size: 16px;
+  color: #c73232;
+}
+
+.owner__item {
+  margin-bottom: 50px;
+}
+
+.owner__item:last-child {
+  margin-bottom: 0px;
+}
+
+.owner__item.commission .field__label {
+  width: 28%;
+}
+
+.owner__item.commission .field__input {
+  width: 74%;
+  padding-left: 15px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.owner__item.commission .field__label + .field__input {
+  width: 40%;
+  padding-left: 15px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.owner__item.commission .btn-primary {
+  width: 24%;
+}
+
+.owner__fields {
+  margin-top: 40px;
+}
+
+.owner__field {
+  margin-bottom: 30px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+}
+
+.owner__field.full {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.owner__field.full .field__input {
+  width: 100%;
+  margin-right: 0px;
+  margin-bottom: 40px;
+}
+
+.owner__field.full .btn-primary {
+  width: 49%;
+  max-width: 236px;
+}
+
+.owner__field .error-field {
+  top: 48px;
+  bottom: auto;
+}
+
+@media (max-width: 1470px) {
+  .owner__block {
+    padding: 20px;
+  }
+  .owner__item.commission .btn-primary {
+    width: 28%;
+  }
+}
+/*# sourceMappingURL=Owner.css.map */

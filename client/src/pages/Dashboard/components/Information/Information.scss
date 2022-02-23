@@ -1,0 +1,54 @@
+@import "../../../../styles/variables";
+@import "../../../../styles/mixins";
+
+.information {
+  color: inherit;
+  width: 31%;
+
+  &__head {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+
+    h2 {
+      padding-right: 30px;
+    }
+  }
+
+  &__block {
+    @include block;
+    min-height: 710px;
+  }
+
+  &__item {
+    margin-bottom: 50px;
+
+    &:last-child {
+      margin-bottom: 0px;
+    }
+  }
+
+  &__fields {
+    margin-top: 40px;
+  }
+
+  &__field {
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .field__input {
+      pointer-events: none;
+    }
+  }
+}
+
+@media (max-width: 1470px) {
+  .information {
+    &__block {
+      padding: 20px;
+    }
+  }
+}
